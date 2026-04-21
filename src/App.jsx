@@ -179,7 +179,7 @@ export default function App() {
     const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
     const load = dailyLoads[key] || 0;
     last30Days.push({ date: `${d.getMonth() + 1}/${d.getDate()}`, load, fullDate: key });
-  });
+  }
 
   // Add 7-day rolling average
   last30Days.forEach((day, idx) => {
